@@ -1,16 +1,19 @@
+import { CounterComponent } from './counter/counter.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HerosModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HerosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

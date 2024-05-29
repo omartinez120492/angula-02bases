@@ -1,0 +1,22 @@
+<h1> {{name}} </h1>
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+  <td>Edad:</td>
+  <dd>{{ege}}</dd>
+  <td>Método:</td>
+  <dd> {{getHeroDescription()}} </dd>
+  <td>Capitalizado:</td>
+  <dd>{{ capitalizeName }}</dd>
+</dl>
+<button
+  *ngIf="name == 'ironMan'"
+  class="btn btn-primary "
+  (click)="changeName('Doctor Strange')">Cambiar Nombre
+</button>
+<button class="btn btn-warning ms-2" (click)="resetData()">Reset</button>
+<button
+*ngIf="ege == 45"
+  class="btn btn-primary ms-2"
+  (click)="changeEge(50)" >Cambiar Edad
+</button>
