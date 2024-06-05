@@ -1,0 +1,22 @@
+<h4>Listado de personajes</h4>
+<ul class="list-group">
+  <li *ngFor="let personaje of charactersList;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      " class="list-group-item d-flex justify-content-between align-items-center"
+      [ngClass]="{
+      'list-group-item-success': isFirst,
+      'list-group-item-primary': true
+    }">
+    <!-- aplicar  estilos dinámicos -->
+    <div>
+      <span class="text-primary"> {{ personaje.id?.substring(0,2) }} </span>
+      <span>{{personaje.name}} - </span>
+      <strong>Power: </strong>
+      <span>{{personaje.power}}</span>
+    </div>
+    <button class="btn btn-danger" (click)="emitDeleteCharacter(personaje)">x</button>
+  </li>
+</ul>
